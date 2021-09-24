@@ -15,7 +15,7 @@ namespace LogicalPrograms
             {
 
                 Console.WriteLine("\n1.  Fibonancci Series  \n2.  ArmStrong number   \n3.  Prime Factorial number  \n4. Reverse of  a number  " +
-                "    \n5. Coupon Number  \n6. Vending Machine  \n7.  show the Day Of week  \n8.  Temparature converstion \n9. StopWatch ");
+                "    \n5. Coupon Number  \n6. Vending Machine  \n7.  show the Day Of week  \n8.  Temparature converstion \n9. StopWatch \n10. Monthly rate of interest  \n11. Square root   \n12.  To Binary");
                   
                  int v = Convert.ToInt32(Console.ReadLine());
                 switch (v)
@@ -67,11 +67,24 @@ namespace LogicalPrograms
                         time.CountTime();
                         /// show pontential fix used PrintElapsedTime for stop watch
                         break;
+                    case 10:
+                        MonthlyPayment monthlyPayment = new MonthlyPayment();
+                        monthlyPayment.CompoundInterest();
+                        break;
+                    case 11:
+                        SquareRoot squareRoot = new SquareRoot();
+                        Console.WriteLine(squareRoot.Sqrt(9));
+                        break;
+                    case 12:
+                        BinaryToConversion binary = new BinaryToConversion();
+                        binary.ToBinary();
+                        break;
                     default:
                         Console.WriteLine("U r given wrong option");
                         break;
                 }
             }
+            Console.ReadLine();
         }
     }
 }
